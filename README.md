@@ -1,1 +1,1 @@
-# rental-cars
+# Проект RentalCars
