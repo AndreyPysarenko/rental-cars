@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const CarItemStyle = styled.li`
   display: flex;
@@ -32,7 +32,9 @@ export const ImgWrap = styled.div`
 `;
 
 export const Img = styled.img`
-  height: 268px;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
   background: linear-gradient(
       180deg,
       rgba(18, 20, 23, 0.5) 2.5%,
@@ -48,8 +50,8 @@ export const Heart = styled.svg`
   display: inline-block;
   width: 18px;
   height: 18px;
-  fill: ${(props) => props.fill || "none"};
-  stroke: ${(props) => props.stroke || "var(--color-text-button-and-bg)"};
+  fill: ${props => props.fill || 'none'};
+  stroke: ${props => props.stroke || 'var(--color-text-button-and-bg)'};
   cursor: pointer;
 
   &:hover,
@@ -87,7 +89,7 @@ export const Span = styled.span`
 
 export const DescriptListWrap = styled.div`
   display: flex;
-  gap: ${(props) => props.$gap || "4px"};
+  gap: ${props => props.$gap || '4px'};
   flex-direction: column;
   height: auto;
 `;
@@ -110,7 +112,7 @@ export const DescriptItem = styled.li`
       width: 1px;
       background-color: rgba(18, 20, 23, 0.1);
       margin-right: 6px;
-      content: "";
+      content: '';
     }
   }
 `;
@@ -118,7 +120,7 @@ export const DescriptItem = styled.li`
 export const Button = styled.button`
   display: flex;
   justify-content: center;
-  width: ${(props) => props.width || "100%"};
+  width: ${props => props.width || '100%'};
   height: 44px;
   padding: 12px;
   border: none;
